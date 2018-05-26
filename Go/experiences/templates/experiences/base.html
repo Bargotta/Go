@@ -1,0 +1,107 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Link All Javascript Files -->
+    <script type="text/javascript" src="{% static "js/libraries/jquery-1.11.2.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/libraries/jquery.mousewheel.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/libraries/jquery.observable.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/libraries/jquery.views.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/libraries/bootstrap.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/libraries/wow.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/libraries/jsrender.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/libraries/moment.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/libraries/popcorn-complete.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/libraries/popcorn.HTMLYouTubeVideoElement.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/libraries/polyfiller.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/libraries/d3.v4.min.js" %}"></script>
+    <!--<script type="text/javascript" src="http://afarkas.github.io/webshim/js-webshim/minified/polyfiller.js"></script>-->
+    <!-- Link All Style Files -->
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static "css/libraries/bootstrap.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/libraries/animate.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/libraries/bootstrap-xxs-tn.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}" />
+    <!-- favicon -->
+    <link rel="icon" href="{% static 'img/favicon.ico' %}">
+    
+{# ---------------------------------------------------------------------------------------------- #}
+    {% block stylesheets %}
+    {% endblock stylesheets %}
+{# ---------------------------------------------------------------------------------------------- #}
+</head>
+<body>
+
+    <!-- hidden elements for storing user/video data -->
+    <div id="data-hidden" style="display: hidden;">
+{# ---------------------------------------------------------------------------------------------- #}
+        {% block hidden_data %}
+        <input name="user-id"  id="user-id"  type="hidden" value="{{ user_id }}" />
+        {% endblock hidden_data %}
+{# ---------------------------------------------------------------------------------------------- #}
+    </div>
+
+{# ---------------------------------------------------------------------------------------------- #}
+    {% block header %}
+    <nav id="site-header" class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <!-- Navbar-left -->
+        <div id="site-brand">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a class="navbar-brand" href="/">
+                        <img src="{% static 'img/logo.png' %}">
+                    </a>
+                </li>
+                <li>
+                    <a class="navbar-brand" href="/">
+                        <span id="site-title">Go</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Navbar-center and navbar-right: collapsable (disabled for now) -->
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-center">
+                <li>
+                    <div id="course-info">
+                    </div>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <div id="input-outer">
+                        {# ---------------------------------------- #}
+                        {% block input %}
+                        {% endblock input %}
+                        {# ---------------------------------------- #}
+                        <div id="clear">
+                            X
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    {% endblock header %}
+{# ---------------------------------------------------------------------------------------------- #}
+
+{# ---------------------------------------------------------------------------------------------- #}
+    {% block page %}
+    {% endblock page %}
+{# ---------------------------------------------------------------------------------------------- #}
+
+{# ---------------------------------------------------------------------------------------------- #}
+    {% block templates %}
+    {% endblock templates %}
+{# ---------------------------------------------------------------------------------------------- #}
+
+{# ---------------------------------------------------------------------------------------------- #}
+    {% block javascript %}
+    {% endblock javascript %}
+{# ---------------------------------------------------------------------------------------------- #}
+</body>
+</html>
