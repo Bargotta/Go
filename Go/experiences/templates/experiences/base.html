@@ -25,6 +25,8 @@
     <link rel="stylesheet" type="text/css" href="{% static "css/libraries/bootstrap.css" %}" />
     <link rel="stylesheet" type="text/css" href="{% static "css/libraries/animate.css" %}" />
     <link rel="stylesheet" type="text/css" href="{% static "css/libraries/bootstrap-xxs-tn.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
     <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}" />
     <!-- favicon -->
     <link rel="icon" href="{% static 'img/favicon.ico' %}">
@@ -56,22 +58,50 @@
                         <img src="{% static 'img/logo.png' %}">
                     </a>
                 </li>
-                <li>
+<!--                 <li>
                     <a class="navbar-brand" href="/">
                         <span id="site-title">Go</span>
                     </a>
-                </li>
+                </li> -->
             </ul>
         </div>
-        <!-- Navbar-center and navbar-right: collapsable (disabled for now) -->
+        <!-- search bar -->
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-center">
+            <ul class="nav navbar-nav navbar-right" id="page-icons">
                 <li>
-                    <div id="course-info">
+                    <div class="page-icon">
+                        <i class="fa fa-heart-o" style="font-size:24px"></i>
+                    </div>
+                    <div class="page-icon-desc">
+                        SAVED
+                    </div>
+                </li>
+                <li>
+                    <div class="page-icon">
+                        <i class="fa fa-envelope-o" style="font-size:24px"></i>                
+                    </div>
+                    <div class="page-icon-desc">
+                        INBOX
+                    </div>
+                </li>
+                <li>
+                    <div class="page-icon">
+                        <i class="fa fa-bullseye" style="font-size:24px"></i>
+                    </div>
+                    <div class="page-icon-desc">
+                        NEARBY
+                    </div>
+                </li>
+                <li>
+                    <div class="page-icon">
+                        <i class="fa fa-user-o" style="font-size:24px"></i>
+                    </div>
+                    <div class="page-icon-desc">
+                        PROFILE
                     </div>
                 </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-left">
                 <li>
                     <div id="input-outer">
                         {# ---------------------------------------- #}
