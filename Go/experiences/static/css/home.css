@@ -1,0 +1,121 @@
+/* avoid overlap from navbar */
+#home-body
+{
+    margin-top: 67px;
+}
+
+.category-title
+{
+	font-size: 2.5em;
+	margin-left: 1.3em;
+	margin-top: 0.2em;
+}
+
+/* EXPLORE EXPERIENCES */
+.experience-list-item {
+    cursor: pointer;
+    width: 190px;
+    padding: 0.4rem;
+    display: inline-block;
+}
+
+.experience-list-item:hover
+{
+    transition: all .1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out; /* haven't checked if this is correct for safari */
+    transform: scale(1.05);
+}
+
+.experience-list-item-info > h4 {
+    margin: 0.2rem 0;
+    font-size: 12px;
+    white-space: normal;
+    margin-left: 10px;
+    color: black;
+}
+
+.experience-name
+{
+    font-weight: 600;
+}
+
+.experience-list-item img {
+    width: 100%;
+    -webkit-transition: box-shadow 0.15s ease-in-out;
+    -moz-transition: box-shadow 0.15s ease-in-out;
+    transition: box-shadow 0.15s ease-in-out;
+}
+
+/* Use child descendent selectors instead of javascript */
+.experience-list-item:hover img {
+    -webkit-box-shadow: 2px 2px 5px 1px rgba(180,180,180,1), -2px 2px 5px 1px rgba(180,180,180,1);
+    -moz-box-shadow: 2px 2px 5px 1px rgba(180,180,180,1), -2px 2px 5px 1px rgba(180,180,180,1);
+    box-shadow: 2px 2px 5px 1px rgba(180,180,180,1), -2px 2px 5px 1px rgba(180,180,180,1);
+}
+
+.experience-list-item:hover span {
+    color: '#23527c';
+}
+/* /EXPLORE EXPERIENCES */
+
+
+/* TRENDING EXPERIENCES */
+.trending-experience-list-item {
+    cursor: pointer;
+    width: 500px;
+    padding: 0.4rem;
+    display: inline-block;
+}
+
+.trending-experience-list-item:hover
+{
+    transition: all .1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out; /* haven't checked if this is correct for safari */
+    transform: scale(1.05);
+}
+
+.trending-experience-list-item-info > h4 {
+    margin: 0.2rem 0;
+    font-size: 14px;
+    white-space: normal;
+    margin-left: 10px;
+    color: white;
+    font-weight: 600;
+    position: absolute;
+    left: 0.75em;
+    padding: 0 0.65em;
+}
+
+.trending-experience-name
+{
+    bottom: 2em;
+}
+
+.trending-experience-price
+{
+    bottom: 0.7em;
+}
+
+.trending-experience-list-item img {
+    width: 100%;
+    -webkit-transition: box-shadow 0.15s ease-in-out;
+    -moz-transition: box-shadow 0.15s ease-in-out;
+    transition: box-shadow 0.15s ease-in-out;
+}
+
+/* Use child descendent selectors instead of javascript */
+.trending-experience-list-item:hover img {
+    -webkit-box-shadow: 2px 2px 5px 1px rgba(180,180,180,1), -2px 2px 5px 1px rgba(180,180,180,1);
+    -moz-box-shadow: 2px 2px 5px 1px rgba(180,180,180,1), -2px 2px 5px 1px rgba(180,180,180,1);
+    box-shadow: 2px 2px 5px 1px rgba(180,180,180,1), -2px 2px 5px 1px rgba(180,180,180,1);
+}
+
+.trending-experience-list-item:hover span {
+    color: '#23527c';
+}
+/* /TRENDING EXPERIENCES */
+
+
+
+
+

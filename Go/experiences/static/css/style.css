@@ -31,8 +31,8 @@ html {
 #input-outer input {
     height: 42px;
     width: 189px;
-    border-top: 1px #f60 solid;
-    border-bottom: 1px #f60 solid;
+    border-top: 1px #c7c7c7 solid;
+    border-bottom: 1px #c7c7c7 solid;
     border-left: 0px white solid;
     border-right: 0px white solid;
     outline: none;
@@ -76,18 +76,12 @@ html {
     left: -15px;
     font-size: 25px;
     color: white;
-    /*font-weight: bold;*/
-    /*color: #f60;*/
-
 }
 
 #site-header
 {
     background-color: white;
     border-bottom: 1px solid #c7c7c7 !important;
-    /*background-color: #222;*/
-    /*background-color: #252839;*/
-    /*background-color: #222;*/
 }
 
 #site-header
@@ -96,10 +90,6 @@ html {
     border-radius: 0;
     border: 0;
     z-index: 200;
-    /*top: 0;*/
-    /*height: 64px;*/
-    /*position: fixed;*/
-    /*width: 100%;*/
 }
 
 /* PAGE ICONS */
