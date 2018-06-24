@@ -13,6 +13,12 @@ html {
   }
 }
 
+/* avoid overlap from navbar */
+.page-body
+{
+    margin-top: 67px;
+}
+
 #site-brand > ul
 {
     margin-right: 10px;
@@ -106,6 +112,10 @@ html {
 .page-icon-desc
 {
     text-align: center;
+}
+
+.navbar-collapse a {
+    padding: 0 !important;
 }
 /* /PAGE ICONS */
 
