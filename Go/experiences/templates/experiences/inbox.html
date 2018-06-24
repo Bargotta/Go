@@ -1,0 +1,456 @@
+{% extends "experiences/base.html" %}
+{% load static %}
+
+{# ---------------------------------------------------------------------------------------------- #}
+{% block javascript %}
+    {{ block.super }}
+    <script src="{% static "/js/inbox.js" %}" type="text/javascript"></script>
+{% endblock javascript %}
+{# ---------------------------------------------------------------------------------------------- #}
+
+{# ---------------------------------------------------------------------------------------------- #}
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{% static "/css/inbox.css" %}">
+{% endblock stylesheets %}
+{# ---------------------------------------------------------------------------------------------- #}
+
+{# ---------------------------------------------------------------------------------------------- #}
+{% block templates %}
+{% endblock templates %}
+{# ---------------------------------------------------------------------------------------------- #}
+
+{% block input %}
+<input type="text" id="search-txt" placeholder="Search experiences" onkeyup="search()">
+{% endblock input %}
+
+{# ---------------------------------------------------------------------------------------------- #}
+{% block page %}
+{% verbatim %}
+<body>
+	<div class="container-fluid page-body" id="inbox">
+
+		<div class="row" id="inbox-container">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-sm-3">
+						<select>
+							<option value="volvo">All Messages (30)</option>
+						</select>
+					</div>
+					<div class="col-sm-6"></div>
+					<div class="col-sm-3" id="inbox-page">
+						<button>1</button>
+						<button>2</button>
+						<button>3</button>
+						<button>></button>
+					</div>
+				</div>
+
+				<!-- INBOX -->
+				<div class="row" id="message-container">
+					<div class="col-md-12">
+						<table class="table table-hover" id="messages-table">
+							<tbody>
+
+								<!-- EXAMPLE MESSAGE -->
+								<tr>
+									<td>
+										<div class="profile-pic" style="background-image: url('http://placehold.it/400x200');"></div>
+									</td>
+									<td>
+										<div class="row padding-top">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="col-md-12">
+														Dick
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														Yesterday
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="row padding-top">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="col-md-12">
+														Ur welcome Eleonara. It was a pleasure to host you. I hope you had...
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12 alt-info">
+														Zuiderwoude, Noord-Holland, Netherlands (May 25 - 27, 2018)
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="row padding-top">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="col-md-12 accepted status">
+														Accepted
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														$150.16
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<!-- /EXAMPLE MESSAGE -->
+
+								<!-- EXAMPLE MESSAGE -->
+								<tr>
+									<td>
+										<div class="profile-pic" style="background-image: url('http://placehold.it/400x200');"></div>
+									</td>
+									<td>
+										<div class="row padding-top">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="col-md-12">
+														Go Support
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														5 days ago
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="row padding-top">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="col-md-12">
+														Hi Rustan, we have proceeded to book the only accomodation that...
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12 alt-info">
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="row padding-top">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="col-md-12 cancelled status">
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<!-- /EXAMPLE MESSAGE -->
+
+								<!-- EXAMPLE MESSAGE -->
+								<tr>
+									<td>
+										<div class="profile-pic" style="background-image: url('http://placehold.it/400x200');"></div>
+									</td>
+									<td>
+										<div class="row padding-top">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="col-md-12">
+														Maria
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														6 days ago
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="row padding-top">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="col-md-12">
+														Sorry Eleonora, I am not the owner of the flat and did not know i...
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12 alt-info">
+														Amsterdam, Noord-Holland, Netherlands (May 24 - 27, 2018)
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="row padding-top">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="col-md-12 cancelled status">
+														Cancelled
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														$0.00
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<!-- /EXAMPLE MESSAGE -->
+
+								<!-- EXAMPLE MESSAGE -->
+								<tr>
+									<td>
+										<div class="profile-pic" style="background-image: url('http://placehold.it/400x200');"></div>
+									</td>
+									<td>
+										<div class="row padding-top">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="col-md-12">
+														Agnese Klein
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														20 May
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="row padding-top">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="col-md-12">
+														Dalla stazione centrale prenda via Crisanzio numero 46, (5 minut...
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12 alt-info">
+														Bari, Apulia, Italy (May 17 - 20, 2018)
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="row padding-top">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="col-md-12 accepted status">
+														Accepted
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														$164.75
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<!-- /EXAMPLE MESSAGE -->
+
+								<!-- EXAMPLE MESSAGE -->
+								<tr>
+									<td>
+										<div class="profile-pic" style="background-image: url('http://placehold.it/400x200');"></div>
+									</td>
+									<td>
+										<div class="row padding-top">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="col-md-12">
+														Danka Caterina
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														10 May
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="row padding-top">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="col-md-12">
+														arrivate ad agerola San Iazzaro poi nel caso vi vengo a prendere...
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12 alt-info">
+														Agerola, Campania, Italy (Aug 5 - 7, 2018)
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="row padding-top">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="col-md-12 accepted status">
+														Accepted
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														$183.15
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<!-- /EXAMPLE MESSAGE -->
+
+								<!-- EXAMPLE MESSAGE -->
+								<tr>
+									<td>
+										<div class="profile-pic" style="background-image: url('http://placehold.it/400x200');"></div>
+									</td>
+									<td>
+										<div class="row padding-top">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="col-md-12">
+														David
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														1 Apr
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="row padding-top">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="col-md-12">
+														I hope I hope you guys are going good and well
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12 alt-info">
+														Pine Hills, Fl, United States (Mar 19 - 20, 2018)
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="row padding-top">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="col-md-12 accepted status">
+														Accepted
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														$34.54
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<!-- /EXAMPLE MESSAGE -->
+
+								<!-- EXAMPLE MESSAGE -->
+								<tr>
+									<td>
+										<div class="profile-pic" style="background-image: url('http://placehold.it/400x200');"></div>
+									</td>
+									<td>
+										<div class="row padding-top">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="col-md-12">
+														Flavio
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														27 Mar
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="row padding-top">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="col-md-12">
+														Hi Ele, hope you have a safe trip back. I just leave a 5 stars re...
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12 alt-info">
+														Miami, Fl, United States (Mar 20 - 22, 2018)
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="row padding-top">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="col-md-12 accepted status">
+														Accepted
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														$265.14
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<!-- /EXAMPLE MESSAGE -->
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- /INBOX -->
+			</div>
+		</div>
+
+	</div>
+</body>
+{% endverbatim %}
+{% endblock page %}
+{# ---------------------------------------------------------------------------------------------- #}

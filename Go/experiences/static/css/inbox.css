@@ -1,0 +1,63 @@
+.accepted {
+	color: #0aca0a; /* green */
+}
+
+.cancelled {
+	color: #3d87ff; /* blue */
+}
+
+.status {
+	font-weight: 600;
+}
+
+#inbox-container {
+	padding: 50px 100px 0px 100px;
+}
+
+#inbox-page {
+	left: 11%;
+	color: skyblue;
+}
+
+#inbox-page > button {
+	padding: 4px 11px 4px 11px;
+	background-color: #fffafa00;
+	border-radius: 5px;
+}
+
+select {
+	background-color: #fffafa00;
+	border-radius: 5px;
+    width: 12em;
+    height: 2em;
+}
+
+#message-container {
+	padding-top: 10px;
+}
+
+#messages-table {
+	border-bottom: #dddddd 1px solid;
+}
+
+td {
+	cursor: pointer;
+}
+
+.alt-info {
+	color: grey;
+}
+
+.profile-pic {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.padding-top {
+	padding-top: 10px;
+}
