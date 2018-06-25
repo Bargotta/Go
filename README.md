@@ -20,7 +20,8 @@ Activate your virtual environment by running `$ source ~/.virtualenvs/go/bin/act
 Make sure that you are now running python3 and pip3:
 
 ```
-$ python -v
+$ python --version
+# Python 3.*.*
 $ pip --version
 ```
 
@@ -28,8 +29,10 @@ $ pip --version
 
 **Step 5:** Install the requirements for Go:
 
-`$ pip install –r requirements.txt`
+`$ pip install -r requirements.txt`
 
 **Step 6:** Run the project:
 
 `$ python manage.py runserver`
+
+You can now view the project on `localhost:8000`
