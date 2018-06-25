@@ -2,6 +2,8 @@
 
 ### New Developer Setup – Mac
 
+Note: Complete instructions can be found on the [Django Docs](https://docs.djangoproject.com/en/2.0/intro/contributing/#getting-a-copy-of-django-s-development-version)
+
 **Step 1:** Download [Python 3](https://www.python.org/)
 
 **Step 2:** Create a virtual environment.
@@ -22,10 +24,10 @@ Make sure that you are now running python3 and pip3:
 ```
 $ python --version
 # Python 3.*.*
-$ pip --version
-```
 
-(The pip version should say something about using Python 3)
+$ pip --version
+# Should say something about using Python 3
+```
 
 **Step 5:** Install the requirements for Go:
 
